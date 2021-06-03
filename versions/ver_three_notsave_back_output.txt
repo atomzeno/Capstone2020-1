@@ -1,0 +1,469 @@
+#1th line :
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : 0
+ 8 quantum : 0
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#2th line :
+circ.CX(2,5)
+circ.CX(3,6)
+circ.CX(1,7)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1
+ 6 quantum : a2
+ 7 quantum : a0
+ 8 quantum : 0
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#3th line :
+circ.AND(2,6,8,11)
+circ.AND(1,3,9,12)
+circ.AND(7,5,10,13)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1
+ 6 quantum : a2
+ 7 quantum : a0
+ 8 quantum : a1a2
+ 9 quantum : a0a2
+10 quantum : a0a1
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#4th line :
+circ.CX(2,5)
+circ.CX(3,6)
+circ.CX(1,7)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : 0
+ 8 quantum : a1a2
+ 9 quantum : a0a2
+10 quantum : a0a1
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#5th line :
+MOVE(6, 8)
+circ.CX(8,6)
+circ.CX(6,8)
+MOVE(7, 9)
+circ.CX(9,7)
+circ.CX(7,9)
+MOVE(8, 10)
+circ.CX(10,8)
+circ.CX(8,10)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : a1a2
+ 7 quantum : a0a2
+ 8 quantum : a0a1
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#6th line :
+MOVE(5, 1)
+circ.CX(1,5)
+circ.CX(5,1)
+MOVE(1, 2)
+circ.CX(2,1)
+circ.CX(1,2)
+MOVE(2, 3)
+circ.CX(3,2)
+circ.CX(2,3)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : 0
+ 4 quantum : a3
+ 5 quantum : a0
+ 6 quantum : a1a2
+ 7 quantum : a0a2
+ 8 quantum : a0a1
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#7th line :
+MOVE(3, 5)
+circ.CX(5,3)
+circ.CX(3,5)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : a1a2
+ 7 quantum : a0a2
+ 8 quantum : a0a1
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#8th line :
+circ.CX(4,5)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0
+ 4 quantum : a3
+ 5 quantum : a3
+ 6 quantum : a1a2
+ 7 quantum : a0a2
+ 8 quantum : a0a1
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#9th line :
+circ.CX(1,6)
+circ.CX(2,6)
+circ.CX(3,6)
+circ.CX(3,7)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0
+ 4 quantum : a3
+ 5 quantum : a3
+ 6 quantum : a0+a1+a2+a1a2
+ 7 quantum : a0+a0a2
+ 8 quantum : a0a1
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#10th line :
+circ.AND(4,6,9,11)
+circ.AND(5,7,10,12)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0
+ 4 quantum : a3
+ 5 quantum : a3
+ 6 quantum : a0+a1+a2+a1a2
+ 7 quantum : a0+a0a2
+ 8 quantum : a0a1
+ 9 quantum : a0a3+a1a3+a2a3+a1a2a3
+10 quantum : a0a3+a0a2a3
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#11th line :
+circ.CX(1,6)
+circ.CX(2,6)
+circ.CX(3,6)
+circ.CX(3,7)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0
+ 4 quantum : a3
+ 5 quantum : a3
+ 6 quantum : a1a2
+ 7 quantum : a0a2
+ 8 quantum : a0a1
+ 9 quantum : a0a3+a1a3+a2a3+a1a2a3
+10 quantum : a0a3+a0a2a3
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#12th line :
+circ.CX(1,9)
+circ.CX(2,9)
+circ.CX(4,9)
+circ.CX(2,10)
+circ.CX(4,10)
+circ.CX(7,10)
+circ.CX(8,10)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0
+ 4 quantum : a3
+ 5 quantum : a3
+ 6 quantum : a1a2
+ 7 quantum : a0a2
+ 8 quantum : a0a1
+ 9 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+10 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#13th line :
+circ.CX(1,8)
+circ.CX(4,5)
+circ.CX(4,3)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0+a3
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : a1a2
+ 7 quantum : a0a2
+ 8 quantum : a1+a0a1
+ 9 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+10 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#14th line :
+MOVE(5, 6)
+circ.CX(6,5)
+circ.CX(5,6)
+MOVE(6, 7)
+circ.CX(7,6)
+circ.CX(6,7)
+MOVE(7, 8)
+circ.CX(8,7)
+circ.CX(7,8)
+MOVE(8, 9)
+circ.CX(9,8)
+circ.CX(8,9)
+MOVE(9, 10)
+circ.CX(10,9)
+circ.CX(9,10)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0+a3
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a1+a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#15th line :
+circ.AND(4,7,10,12)
+circ.AND(3,5,11,13)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0+a3
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a1+a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a1a3+a0a1a3
+11 quantum : a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#16th line :
+circ.CX(1,7)
+circ.CX(4,3)
+
+print quantums(1, 13)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a0
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a1a3+a0a1a3
+11 quantum : a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#17th line :
+SWAP(1, 3)
+circ.CX(1,3)
+circ.CX(3,1)
+circ.CX(1,3)
+SWAP(2, 3)
+circ.CX(2,3)
+circ.CX(3,2)
+circ.CX(2,3)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a1a3+a0a1a3
+11 quantum : a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#18th line :
+circ.CX(4,10)
+circ.CX(5,10)
+circ.CX(6,10)
+circ.CX(7,10)
+circ.CX(1,11)
+circ.CX(2,11)
+circ.CX(3,11)
+circ.CX(4,11)
+circ.CX(5,11)
+circ.CX(6,11)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a3+a0a1+a0a2+a1a2+a1a3+a0a1a3
+11 quantum : a0+a1+a2+a3+a0a2+a1a2+a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#19th line :
+circ.AND+(2,3,5)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : a0a2
+ 7 quantum : a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a3+a0a1+a0a2+a1a2+a1a3+a0a1a3
+11 quantum : a0+a1+a2+a3+a0a2+a1a2+a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#20th line :
+circ.AND+(1,3,6)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a3+a0a1+a0a2+a1a2+a1a3+a0a1a3
+11 quantum : a0+a1+a2+a3+a0a2+a1a2+a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+
+#21th line :
+circ.AND+(1,2,7)
+
+print quantums(1, 13)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : 0
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a3+a0a1+a0a2+a1a2+a1a3+a0a1a3
+11 quantum : a0+a1+a2+a3+a0a2+a1a2+a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+circ.barrier(range(14))
+

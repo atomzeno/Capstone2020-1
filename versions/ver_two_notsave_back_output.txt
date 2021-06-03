@@ -1,0 +1,483 @@
+1th line :
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : 0
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a3+a0a1+a0a2+a1a2+a1a3+a0a1a3
+11 quantum : a0+a1+a2+a3+a0a2+a1a2+a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+2th line :
+CNOT(1, 12)
+CNOT(2, 13)
+CNOT(3, 14)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : 0
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a3+a0a1+a0a2+a1a2+a1a3+a0a1a3
+11 quantum : a0+a1+a2+a3+a0a2+a1a2+a0a1a2+a1a2a3
+12 quantum : a0
+13 quantum : a1
+14 quantum : a2
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+3th line :
+AND(2, 14, 5, 15)
+AND(3, 12, 6, 16)
+AND(1, 13, 7, 17)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a3+a0a1+a0a2+a1a2+a1a3+a0a1a3
+11 quantum : a0+a1+a2+a3+a0a2+a1a2+a0a1a2+a1a2a3
+12 quantum : a0
+13 quantum : a1
+14 quantum : a2
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+4th line :
+CNOT(1, 12)
+CNOT(2, 13)
+CNOT(3, 14)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a0a1
+ 8 quantum : a1+a2+a3+a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a2+a3+a0a1+a0a2+a0a3+a0a2a3
+10 quantum : a3+a0a1+a0a2+a1a2+a1a3+a0a1a3
+11 quantum : a0+a1+a2+a3+a0a2+a1a2+a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+5th line :
+CNOT(2, 8)
+CNOT(3, 8)
+CNOT(4, 8)
+CNOT(3, 9)
+CNOT(4, 9)
+CNOT(6, 9)
+CNOT(7, 9)
+CNOT(4, 10)
+CNOT(5, 10)
+CNOT(6, 10)
+CNOT(7, 10)
+CNOT(1, 11)
+CNOT(2, 11)
+CNOT(3, 11)
+CNOT(4, 11)
+CNOT(5, 11)
+CNOT(6, 11)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a0a1
+ 8 quantum : a0a3+a1a3+a2a3+a1a2a3
+ 9 quantum : a0a3+a0a2a3
+10 quantum : a1a3+a0a1a3
+11 quantum : a0a1a2+a1a2a3
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+6th line :
+CNOT(11, 12)
+CNOT(12, 11)
+CNOT(10, 11)
+CNOT(11, 10)
+CNOT(9, 10)
+CNOT(10, 9)
+CNOT(8, 9)
+CNOT(9, 8)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1a2
+ 6 quantum : a0a2
+ 7 quantum : a0a1
+ 8 quantum : 0
+ 9 quantum : a0a3+a1a3+a2a3+a1a2a3
+10 quantum : a0a3+a0a2a3
+11 quantum : a1a3+a0a1a3
+12 quantum : a0a1a2+a1a2a3
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+7th line :
+CNOT(5, 8)
+CNOT(2, 7)
+CNOT(1, 6)
+CNOT(3, 5)
+CNOT(2, 5)
+CNOT(1, 5)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a0+a1+a2+a1a2
+ 6 quantum : a0+a0a2
+ 7 quantum : a1+a0a1
+ 8 quantum : a1a2
+ 9 quantum : a0a3+a1a3+a2a3+a1a2a3
+10 quantum : a0a3+a0a2a3
+11 quantum : a1a3+a0a1a3
+12 quantum : a0a1a2+a1a2a3
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+8th line :
+CNOT(12, 14)
+CNOT(14, 12)
+CNOT(11, 13)
+CNOT(13, 11)
+CNOT(10, 12)
+CNOT(12, 10)
+CNOT(9, 11)
+CNOT(11, 9)
+CNOT(8, 10)
+CNOT(10, 8)
+CNOT(7, 9)
+CNOT(9, 7)
+CNOT(6, 8)
+CNOT(8, 6)
+CNOT(5, 7)
+CNOT(7, 5)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : a0+a1+a2+a1a2
+ 8 quantum : a0+a0a2
+ 9 quantum : a1+a0a1
+10 quantum : a1a2
+11 quantum : a0a3+a1a3+a2a3+a1a2a3
+12 quantum : a0a3+a0a2a3
+13 quantum : a1a3+a0a1a3
+14 quantum : a0a1a2+a1a2a3
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+9th line :
+CNOT(1, 6)
+CNOT(6, 1)
+CNOT(2, 1)
+CNOT(1, 2)
+CNOT(3, 2)
+CNOT(2, 3)
+CNOT(4, 3)
+CNOT(3, 4)
+
+print quantums(1, 17)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a3
+ 4 quantum : 0
+ 5 quantum : 0
+ 6 quantum : a0
+ 7 quantum : a0+a1+a2+a1a2
+ 8 quantum : a0+a0a2
+ 9 quantum : a1+a0a1
+10 quantum : a1a2
+11 quantum : a0a3+a1a3+a2a3+a1a2a3
+12 quantum : a0a3+a0a2a3
+13 quantum : a1a3+a0a1a3
+14 quantum : a0a1a2+a1a2a3
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+10th line :
+CNOT(3, 4)
+CNOT(3, 5)
+CNOT(3, 6)
+
+print quantums(1, 17)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a3
+ 4 quantum : a3
+ 5 quantum : a3
+ 6 quantum : a0+a3
+ 7 quantum : a0+a1+a2+a1a2
+ 8 quantum : a0+a0a2
+ 9 quantum : a1+a0a1
+10 quantum : a1a2
+11 quantum : a0a3+a1a3+a2a3+a1a2a3
+12 quantum : a0a3+a0a2a3
+13 quantum : a1a3+a0a1a3
+14 quantum : a0a1a2+a1a2a3
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+11th line :
+AND+(3, 7, 11)
+AND+(4, 8, 12)
+AND+(5, 9, 13)
+AND+(6, 10, 14)
+
+print quantums(1, 17)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a3
+ 4 quantum : a3
+ 5 quantum : a3
+ 6 quantum : a0+a3
+ 7 quantum : a0+a1+a2+a1a2
+ 8 quantum : a0+a0a2
+ 9 quantum : a1+a0a1
+10 quantum : a1a2
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+12th line :
+CNOT(10, 11)
+CNOT(11, 10)
+CNOT(9, 10)
+CNOT(10, 9)
+CNOT(8, 9)
+CNOT(9, 8)
+CNOT(7, 8)
+CNOT(8, 7)
+
+print quantums(1, 17)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a3
+ 4 quantum : a3
+ 5 quantum : a3
+ 6 quantum : a0+a3
+ 7 quantum : 0
+ 8 quantum : a0+a1+a2+a1a2
+ 9 quantum : a0+a0a2
+10 quantum : a1+a0a1
+11 quantum : a1a2
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+13th line :
+CNOT(3, 4)
+CNOT(3, 5)
+CNOT(3, 6)
+
+print quantums(1, 17)
+ 1 quantum : a1
+ 2 quantum : a2
+ 3 quantum : a3
+ 4 quantum : 0
+ 5 quantum : 0
+ 6 quantum : a0
+ 7 quantum : 0
+ 8 quantum : a0+a1+a2+a1a2
+ 9 quantum : a0+a0a2
+10 quantum : a1+a0a1
+11 quantum : a1a2
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+14th line :
+CNOT(3, 4)
+CNOT(4, 3)
+CNOT(2, 3)
+CNOT(3, 2)
+CNOT(1, 2)
+CNOT(2, 1)
+CNOT(6, 1)
+CNOT(1, 6)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : 0
+ 8 quantum : a0+a1+a2+a1a2
+ 9 quantum : a0+a0a2
+10 quantum : a1+a0a1
+11 quantum : a1a2
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+15th line :
+CNOT(2, 10)
+CNOT(1, 9)
+CNOT(3, 8)
+CNOT(2, 8)
+CNOT(1, 8)
+CNOT(8, 11)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : 0
+ 8 quantum : a1a2
+ 9 quantum : a0a2
+10 quantum : a0a1
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+16th line :
+CNOT(2, 5)
+CNOT(3, 6)
+CNOT(1, 7)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1
+ 6 quantum : a2
+ 7 quantum : a0
+ 8 quantum : a1a2
+ 9 quantum : a0a2
+10 quantum : a0a1
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+17th line :
+AND+(2, 6, 8)
+AND+(1, 3, 9)
+AND+(7, 5, 10)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : a1
+ 6 quantum : a2
+ 7 quantum : a0
+ 8 quantum : 0
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
+18th line :
+CNOT(2, 5)
+CNOT(3, 6)
+CNOT(1, 7)
+
+print quantums(1, 17)
+ 1 quantum : a0
+ 2 quantum : a1
+ 3 quantum : a2
+ 4 quantum : a3
+ 5 quantum : 0
+ 6 quantum : 0
+ 7 quantum : 0
+ 8 quantum : 0
+ 9 quantum : 0
+10 quantum : 0
+11 quantum : 0
+12 quantum : 0
+13 quantum : 0
+14 quantum : 0
+15 quantum : 0
+16 quantum : 0
+17 quantum : 0
+
